@@ -1,22 +1,21 @@
-import CardSideBar from "./components/CardSideBar"
+import { useState } from "react"
+import CardSidebar from "./components/CardSidebar"
 import Container from "./components/Container"
 import Header from "./components/Header"
-import Principal from "./components/Principal"
 import Sidebar from "./components/Sidebar"
+import { useEffect } from "react"
+import Principal from "./components/Principal"
+import { Outlet } from "react-router-dom"
 
 function App() {
-
   return (
     <>
-      <Header/>
+      <Header />
       <Container>
-       <Sidebar>
-      <CardSideBar/>
-      <CardSideBar/>
-      <CardSideBar/>
-       </Sidebar>
+        <Sidebar/>
+        <Outlet/>
        <Principal/>
-       </Container>
+      </Container>
     </>
   )
 }
